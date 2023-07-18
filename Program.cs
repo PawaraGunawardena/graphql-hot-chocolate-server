@@ -4,6 +4,7 @@ builder.Services.AddGraphQLServer().
     AddType<BookType>();
 var app = builder.Build();
 
+app.UseStaticFiles();
 app.MapGet("/", () => "Hello World!");
 app.MapGraphQL();
 
